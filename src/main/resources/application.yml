@@ -1,0 +1,7 @@
+spring.application.name: jander-security
+server.port: 8080
+
+spring.jpa:
+  show-sql: true
+  hibernate.ddl-auto: create-drop
+  properties.hibernate.dialect: org.hibernate.dialect.DerbyDialect
