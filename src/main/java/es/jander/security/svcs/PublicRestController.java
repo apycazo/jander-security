@@ -6,12 +6,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("public")
+@RequestMapping
 public class PublicRestController
 {
-    @GetMapping
-    public Pair<String,String> returnServiceName()
+    @GetMapping("public")
+    public Pair<String,String> publicServiceRequest()
     {
-        return Pair.of("serviceName", PublicRestController.class.getSimpleName());
+        return Pair.of("serviceName", "public service");
+    }
+
+    @GetMapping("private")
+    public Pair<String,String> privateServiceRequest()
+    {
+        return Pair.of("serviceName", "private service");
     }
 }
